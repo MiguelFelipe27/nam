@@ -1,0 +1,68 @@
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("fundo-coracao.png");
+  background-color: #A3C7D6;
+}
+#audio 
+{
+  display: none;
+}
+.heart 
+{
+  position: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: #ff4d6d;
+  transform: rotate(-45deg);
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+.heart:before,
+.heart:after 
+{
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ff4d6d;
+}
+.heart:before 
+{
+  top: -100px;
+  left: 0;
+}
+.heart:after 
+{
+  top: 0;
+  left: 100px;
+}
+.heart span 
+{
+  position: relative;
+  top: 60px;
+  z-index: 1;
+  left: 50px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+}
+@keyframes heartbeat 
+{
+  0%, 100% 
+  {
+    transform: scale(0.9);
+  }
+  50% 
+  {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        body
+        {
+            background: #3F3B6C;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        button
+        {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            background: #9F73AB;
+            color: #A3C7D6;
+            width: 150px;
+            height: 50px;
+            border-radius: 20px;
+            /*transition: all 0.5s linear;*/
+        }
+        .btn
+        {
+            width: 150px;
+            height: 70px;
+            font-size: large;
+            background: #ff006a;
+            color: #d7bfda;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça a sua escolha:</h1>
+    <button onmouseover="mover()">NÃO!!</button>
+    <a href="aah.html"><button class="btn" onclick="musica()">SIIIMMM, minha estátua Grega!</button></a>
+
+    <script>
+        let btn = document.querySelector("button");
+        let x,y;
+
+        function mover()
+        {
+            btn.style.display = "none"
+            novaposicao()
+        }
+        function novaposicao()
+        {
+            x = Math.floor(Math.random() * (1500 - 100) + 100);
+            y = Math.floor(Math.random() * (800 - 100) + 100);
+            
+            btn.style.left = x + "px";
+            btn.style.top = y + "px";
+            btn.style.display = "block";
+        }
+        function soundBeep()
+{
+    let btnm = document.querySelector(".btn");
+    let mus = new Audio();
+    mus.src = "beep-07a.mp3";
+    mus.play();
+}
+        let btnm = document.querySelector(".btn");
+    </script>
+</body>
+</html>
